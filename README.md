@@ -61,8 +61,6 @@ Access the detailed report, prototype working videos and some example test case 
 🔗 [Google Drive – MAS Agent Resources](https://drive.google.com/drive/folders/1bONcdob9NL57Tbuuy_gB_qwEXeAvXZLs?usp=sharing)
 
 ---
----
-
 ## Additional Context & Highlights
 
 ### 1. No-Code Approach
@@ -82,7 +80,7 @@ Access the detailed report, prototype working videos and some example test case 
 - Future integration with **hospital APIs, IoT medical infrastructure, and secure health data exchanges** is envisioned to scale these capabilities in a compliant and efficient manner.
 
 ### 4. Extensibility & Vision
-- The current build allows manual or simulated data inputs.
+- The current build allows input via email(added as trigger) or simulated data inputs.
 - Future extensions include:
   - Real-time hospital data sync
   - Bidirectional ticketing integration (e.g., ServiceNow)
