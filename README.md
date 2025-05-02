@@ -61,6 +61,37 @@ Access the detailed report, prototype working videos and some example test case 
 🔗 [Google Drive – MAS Agent Resources](https://drive.google.com/drive/folders/1bONcdob9NL57Tbuuy_gB_qwEXeAvXZLs?usp=sharing)
 
 ---
+---
+
+## Additional Context & Highlights
+
+### 1. No-Code Approach
+- The system is built entirely on **Relevance AI’s no-code platform**, enabling rapid prototyping and deployment.
+- Despite the no-code base, the platform allows for **advanced logic, sub-agents, and metadata handling**, making it suitable even for technically complex decision workflows.
+- This approach lowers the barrier to entry while supporting extensibility for future low-code or API-based scaling.
+
+### 2. Technical Capabilities
+- Agents communicate via **shared metadata**, **trigger mechanisms**, and **flow logic**, forming a coordinated decision-making system.
+- Powered by customizable **LLM backends** including OpenAI, Anthropic, Mistral, and more.
+- Capable of **automated classification, forecasting, alert generation**, and **inter-agent communication loops** to simulate a real-world MAS system.
+
+### 3. Hospital Network Integration
+- The system is primarily designed for deployment within **individual hospitals**, ensuring that resource management and decision-making are tailored to each facility's needs.
+- However, if hospitals fall under the **same healthcare network or chain**, the system supports **secure data sharing and agent collaboration** to enable inter-facility coordination.
+- This enables the **mobilization of surplus resources**, patient redirection, or staffing assistance across facilities while maintaining data privacy and governance protocols.
+- Future integration with **hospital APIs, IoT medical infrastructure, and secure health data exchanges** is envisioned to scale these capabilities in a compliant and efficient manner.
+
+### 4. Extensibility & Vision
+- The current build allows manual or simulated data inputs.
+- Future extensions include:
+  - Real-time hospital data sync
+  - Bidirectional ticketing integration (e.g., ServiceNow)
+  - Interactive dashboards for healthcare administrators
+  - Escalation matrices for exception handling and alert prioritization
+
+This system is designed not just as a proof-of-concept but as a **modular foundation** that can be adapted for **real-time deployments** in smart hospital ecosystems.
+
+---
 
 ## Notes & Limitations
 
@@ -70,5 +101,3 @@ Access the detailed report, prototype working videos and some example test case 
   - 10MB knowledge store
   - No API integrations
   - One-way trigger (no trigger reply support)
-- Designed for **platform-agnostic deployment**; scalable in real-time with necessary extensions.
-- Future plans include full deployment, round-trip email automation, and hospital API integration.
