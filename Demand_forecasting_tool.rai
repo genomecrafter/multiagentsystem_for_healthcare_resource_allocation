@@ -1,0 +1,51 @@
+{
+  "_id": "9df72144a0d9-4145-b7a5-00a5baf4e753_-_9404635a-e1dd-4de7-a4a8-350cd32fb75b_-_latest",
+  "creator_first_name": "Nikita S Raj",
+  "creator_last_name": "Kapini",
+  "creator_user_id": "5c556b02-8835-4154-818e-4b5598e79154",
+  "description": "The Demand Forecasting Tool enhances the capability of the Demand Assessment Agent (DAA) by providing accurate predictions of future healthcare resource demand. It analyzes historical data, current trends, and external factors to forecast potential shortages or surges in healthcare resources like hospital beds, ventilators, and staff. The tool empowers decision-makers to take proactive measures to address predicted challenges, ensuring efficient resource management.",
+  "output_schema": {},
+  "params_schema": {
+    "properties": {
+      "text": {
+        "type": "string",
+        "order": 1,
+        "title": "Give the info for demand forecasting",
+        "description": "Historical Data:\nInclude data trends from the past (e.g., 30 days) such as:\n\nDaily patient intake numbers.\nResource utilization (e.g., hospital beds, ventilators, staff availability).\nCurrent Resource Availability:\nMention the current count of available resources, including:\n\nNumber of beds, ventilators, and staff on hand.\nExternal Factors:\nProvide any context that may impact resource demand, such as:\n\nSeasonal illnesses (e.g., flu season or COVID waves).\nPopulation density or growth trends in the region.\nEvents or emergencies (e.g., local outbreaks or natural disasters).\nTimeframe for Forecast:\nClearly state the period you want the forecast for (e.g., next 7 days, 14 days).\n\nDesired Outputs:\nIndicate what kind of analysis is needed, such as:\n\nDaily demand predictions for each resource.\nPotential shortages or surpluses.\nActionable recommendations for addressing issues.",
+        "metadata": {}
+      }
+    },
+    "required": [
+      "text"
+    ],
+    "type": "object"
+  },
+  "project": "9df72144a0d9-4145-b7a5-00a5baf4e753",
+  "prompt_description": "\"Use the Demand Forecasting Tool to analyze historical and real-time data to predict future demand for healthcare resources. Consider the following parameters:\n\nHistorical patient intake and resource utilization trends over the past 30 days.\nCurrent resource availability and daily patient intake trends.\nExternal factors such as seasonal illnesses, population density, and emergencies.\nProvide:\nA daily forecast for the next 7 days.\nPredicted shortages or surpluses in resources.\nRecommendations to mitigate resource shortages or manage surpluses effectively.\nEnsure forecasts are clear and actionable for decision-makers.\"",
+  "public": false,
+  "state_mapping": {
+    "text": "params.text",
+    "llm": "steps.llm.output"
+  },
+  "studio_id": "9404635a-e1dd-4de7-a4a8-350cd32fb75b",
+  "title": "Demand Forecasting Tool",
+  "transformations": {
+    "steps": [
+      {
+        "transformation": "prompt_completion",
+        "name": "llm",
+        "output": {
+          "answer": "{{answer}}"
+        },
+        "params": {
+          "prompt": "\"You are a healthcare demand forecasting assistant. Your task is to predict the future demand for healthcare resources based on the following information:\n\nInputs:\n\nHistorical Data:\n\nPatient intake trends over the past 30 days.\n\nAverage daily resource utilization (e.g., beds, ventilators, staff).\n\nCurrent Resource Availability:\n\nNumber of beds, ventilators, and staff currently available.\n\nExternal Factors:\n\nUpcoming seasonal or environmental changes (e.g., flu season, heatwaves).\n\nRegional characteristics (e.g., population density, socioeconomic factors).\n\nTrends:\n\nIndicate any recent changes in demand (e.g., a 5% weekly increase).\n\nRequired Outputs:\n\nForecast: Provide a daily prediction of resource demand for the next [7 days/14 days].\n\nGap Analysis: Identify any potential shortages or surpluses in resources.\n\nRecommendations: Suggest actionable steps to mitigate shortages or manage surpluses, such as transferring resources, increasing capacity, or reallocating staff.\n\nExample Format:\n\nForecast:\n\nDay 1: Beds needed: X; Ventilators needed: Y; Staff needed: Z.\n\nDay 7: Beds needed: A; Ventilators needed: B; Staff needed: C.\n\nSummary:  \nBased on the forecast, a shortage of X beds and Y ventilators is expected by Day 5.\n\nRecommendations:\n\nAllocate [specific resource] from [facility/region].\n\nDeploy temporary staff to [location].\n\nIncrease resource availability by [specific action].\n\nEnsure the forecast is precise and actionable. Consider historical trends, real-time data, and external factors while making predictions.\""
+        }
+      }
+    ]
+  },
+  "update_date_": "2025-01-15T10:34:17.806Z",
+  "version": "latest",
+  "metadata": {
+    "last_run_date": "2025-04-21T16:20:12.510Z"
+  }
+}
