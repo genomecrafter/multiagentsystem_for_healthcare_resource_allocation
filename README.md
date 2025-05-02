@@ -21,7 +21,7 @@ This MAS is composed of **three main agents**:
 - Considers criticality, equity, distance constraints, and urgency.
 - Responds to alerts raised by DAA and ensures balanced distribution.
 
-### 3. Procurement & Risk Management Agent (PRMA)
+### 3. Proactive Resource Mobilization Agent (PRMA)
 - Initiates external procurement when internal supplies are inadequate.
 - Addresses transportation delays, low emergency drug stocks, and staff shortages.
 - Capable of future integration with ticketing systems like ServiceNow for escalation.
