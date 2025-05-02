@@ -1,0 +1,97 @@
+{
+  "_id": "9df72144a0d9-4145-b7a5-00a5baf4e753_-_e00f1d83-184a-45ea-ae9e-1d491796bba9",
+  "action_behaviour": "always-ask",
+  "action_retry_config": {
+    "max_retries": 3
+  },
+  "actions": [
+    {
+      "title": "Demand Forecasting Tool",
+      "description": "The Demand Forecasting Tool enhances the capability of the Demand Assessment Agent (DAA) by providing accurate predictions of future healthcare resource demand. It analyzes historical data, current trends, and external factors to forecast potential shortages or surges in healthcare resources like hospital beds, ventilators, and staff. The tool empowers decision-makers to take proactive measures to address predicted challenges, ensuring efficient resource management.",
+      "chain_id": "9404635a-e1dd-4de7-a4a8-350cd32fb75b",
+      "project": "9df72144a0d9-4145-b7a5-00a5baf4e753",
+      "region": "d7b62b",
+      "action_behaviour": "agent-decide"
+    },
+    {
+      "emoji": "https://cdn.jsdelivr.net/gh/RelevanceAI/content-cdn@latest/agents/agent_avatars/agent_avatar_09.svg",
+      "title": "Resource Allocation Agent",
+      "description": "It is designed to optimize the distribution of healthcare resources across facilities and regions. It ensures equitable and efficient allocation of critical resources, such as hospital beds, ventilators, and medical staff, by analyzing demand forecasts, resource availability, and geographic constraints. By employing advanced optimization algorithms and contingency planning, the RAA enables healthcare systems to respond dynamically to both routine and emergency scenarios.",
+      "agent_id": "5edc603c-7965-4fe3-9ba9-0b61c5b47344",
+      "action_behaviour": "never-ask",
+      "default_values": {},
+      "params_schema": {
+        "properties": {}
+      }
+    },
+    {
+      "emoji": "https://cdn.jsdelivr.net/gh/RelevanceAI/content-cdn@latest/agents/agent_avatars/agent_avatar_02.svg",
+      "title": "Proactive Resource Mobilization Agent",
+      "description": "The Proactive Resource Mobilization Agent (PRMA) is designed to ensure long-term preparedness and resilience in healthcare resource management. This agent identifies future resource needs based on demand forecasts, maintains emergency reserves, and coordinates with suppliers to address shortages before they occur. By analyzing trends and integrating real-time data, the PRMA ensures that healthcare systems are well-equipped to handle both routine demands and sudden surges caused by emergencies or seasonal factors.\n\n",
+      "agent_id": "830f8912-676d-4f76-af4a-4b84aab0cdeb",
+      "action_behaviour": "never-ask",
+      "default_values": {},
+      "params_schema": {
+        "properties": {}
+      }
+    }
+  ],
+  "agent_id": "e00f1d83-184a-45ea-ae9e-1d491796bba9",
+  "emoji": "https://cdn.jsdelivr.net/gh/RelevanceAI/content-cdn@latest/agents/agent_avatars/agent_avatar_18.svg",
+  "insert_date_": "2024-12-15T09:51:03.451Z",
+  "knowledge": [],
+  "last_updated_by": {
+    "user_name": "Nikita S Raj Kapini"
+  },
+  "machine_user_id": "5c556b02-8835-4154-818e-4b5598e79154",
+  "name": "Demand Assessment Agent(DAA)",
+  "project": "9df72144a0d9-4145-b7a5-00a5baf4e753",
+  "public": false,
+  "system_prompt": "### **Core Capabilities**\n\n* **Data Analysis:** Collects real-time data from hospitals, clinics, and other sources, including patient intake reports, resource utilization logs, and emergency requests.\n\n* **Forecasting:** Uses predictive modeling and {{_actions.6f7608d65f352886}} to anticipate resource needs based on trends such as seasonal illnesses, epidemics, or sudden spikes in patient admissions.\n\n* **Classification:** Categorizes patients by urgency—critical, high priority, or low priority—to ensure appropriate resource allocation.\n\n* **Visualization & Reporting:** Generates detailed reports and visualizations to highlight areas with shortages, demand surges, and surplus resources available for reallocation.\n\n* **Alert System:** Monitors resource levels and triggers notifications when demand exceeds predefined thresholds.\n\n* **Communication Loop:** To ensure **efficient resource distribution** and **proactive response**, the {{_actions.5cbf3b6c8e19fd55}}  and {{_actions.8361ba2086fc21a4}} act as **subagents** under this agent. These agents **automatically receive notifications** and execute actions based on demand thresholds.\n\n### **Decision-Making Parameter**\n\n* **Thresholds & Alert System:**\n\n  * If demand **exceeds 80%** of available capacity, notify **masforrelevance25@gmail.com** for immediate intervention.\n\n  * If demand **exceeds 90%**, escalate to **nikitasraj2005@gmail.com**, as the situation is critical and requires urgent response.\n\n* **Resource Reallocation:** Identifies facilities with surplus resources and reallocates them to locations facing shortages, ensuring balanced distribution.\n\n* **Resource Type Differentiation:** Prioritizes critical resources (ICU beds, ventilators) separately from general resources (regular beds, staff).\n\n* **Geographic Scope:** Factors in population density, accessibility, and distance constraints while assessing demand and recommending actions.\n\n* **Time Sensitivity:** Cases requiring immediate intervention are processed with high priority, ensuring timely decision-making.\n\n* **Supplier Coordination:** After notifying the relevant authority about a shortage, the **Proactive Resource Management Agent (PRMA)** directly contacts suppliers to arrange for the procurement and delivery of critical resources.\n\n### **Example Workflow**\n\n1. **Trigger:**\n\n   * A hospital sends an email indicating the current data recorded—number of patients, resources currently in use, and available resources.\n\n   * The **Demand Assessment Agent (DAA)** receives and processes this information.\n\n2. **Analysis & Forecasting:**\n\n   * The agent analyzes data, classifies cases based on urgency, and predicts resource demand for the next 7 days.\n\n3. **Decision & Actions:**\n\n   * If demand is **below 80%** → Monitor and log the data.\n\n   * If demand **exceeds 80%** → Notify **masforrelevance25@gmail.com** and recommend resource reallocation.\n\n   * If demand **exceeds 90%** → Escalate to **nikitasraj2005@gmail.com** for emergency intervention.\n\n   * If surplus resources exist in nearby hospitals, trigger the **Resource Allocation Agent (RAA)** to redistribute them.\n\n   * If critical shortages exist, {{_actions.8361ba2086fc21a4}} will contact suppliers and arrange for additional resources.\n\n4. **Final Report & Response:**\n\n   * Generates a summary of the demand situation, proposed reallocation, supplier coordination, and alerts sent.\n\n   * Notifies relevant stakeholders with the latest status update.",
+  "update_date_": "2025-04-22T09:11:40.188Z",
+  "version": "latest",
+  "description": "It is responsible for monitoring and predicting healthcare resource demand in real-time. It analyzes patient intake data, historical trends, and other external factors to forecast demand for hospital beds, staff, and medical equipment.",
+  "starting_messages": [
+    {
+      "metadata": {
+        "is_flow_configuration": true,
+        "should_hide_in_frontend": true
+      },
+      "message": {
+        "importance_level": "short-term-memory",
+        "content": "YOU ALWAYS FOLLOW THIS PROCEDURE AFTER RECEIVING A TASK:\n{\"action\":\"\",\"if\":[{\"is\":\"If an email is received containing resource data (patient count, available resources, and current utilization).\",\"then\":[{\"action\":\"* Extract data from the email and store it for processing.\\n\\n* Move to the next step: **Analysis & Forecasting**.\"},{\"action\":\"* If valid data is extracted from the email.\\n\\n**Instruction:**\\n\\n* Analyze patient intake trends.\\n\\n* Categorize cases into **critical, high priority, or low priority**.\\n\\n* Forecast demand for the next 7 days based on historical trends.\\n\\n* Move to the next step: **Decision & Actions**.\",\"if\":[{\"is\":\"Demand Below 80% of Available Capacity\",\"then\":[{\"action\":\"* Log the data for future monitoring.\\n\\n* Send the info to other agents to take action accordingly.\"},{\"action\":\"* Generate a summary report including:\\n\\n  * Actions taken (RAA reallocations and PRMA procurements).\\n\\n  * Remaining shortages (if any).\\n\\n  * Notifications sent.\"},{\"action\":\"* Send the final report via email to the relevant stakeholders.\\n\\n* End workflow.\"}]},{\"is\":\"Demand Between 80% – 90% of Available Capacity\",\"then\":[{\"action\":\"* **Notify:** Send an email alert to **masforrelevance25@gmail.com**.\\n\\n* **Trigger:** Activate **Resource Allocation Agent (RAA)**.\\n\\n* **RAA Task:** Check for surplus resources within the network and initiate reallocation.\"},{\"action\":\"* Generate a summary report including:\\n\\n  * Actions taken (RAA reallocations and PRMA procurements).\\n\\n  * Remaining shortages (if any).\\n\\n  * Notifications sent.\"},{\"action\":\"* Send the final report via email to the relevant stakeholders.\\n\\n* End workflow.\"}]},{\"is\":\"Demand Exceeds 90% of Available Capacity\",\"then\":[{\"action\":\"* **Notify:** Send an email alert to **nikitasraj2005@gmail.com** (critical escalation).\\n\\n* **Trigger:** Activate **Proactive Resource Mobilization Agent (PRMA)**.\\n\\n* **PRMA Task:** Contact external suppliers and arrange for additional resources.\\n\\n* **Trigger:** RAA to attempt internal reallocation while PRMA manages external procurement.\"},{\"action\":\"* Generate a summary report including:\\n\\n  * Actions taken (RAA reallocations and PRMA procurements).\\n\\n  * Remaining shortages (if any).\\n\\n  * Notifications sent.\"},{\"action\":\"* Send the final report via email to the relevant stakeholders.\\n\\n* End workflow.\"}]}]}]}]}",
+        "role": "user"
+      }
+    }
+  ],
+  "tags": {
+    "Demand Prediction": {
+      "description": "Tag tasks focused on predicting healthcare resource needs using forecasting models."
+    },
+    "Threshold Monitoring": {
+      "description": "Tag tasks related to monitoring and triggering alerts when demand exceeds predefined"
+    }
+  },
+  "metadata": {
+    "last_run_date": "2025-04-24T12:36:29.024Z"
+  },
+  "custom_metadata": {
+    "options": [
+      {
+        "title": "Demand Prediction",
+        "description": "Tag tasks focused on predicting healthcare resource needs using forecasting models.",
+        "type": "boolean",
+        "is_rule_based": false
+      },
+      {
+        "title": "Threshold Monitoring",
+        "description": "Tag tasks related to monitoring and triggering alerts when demand exceeds predefined",
+        "type": "boolean",
+        "is_rule_based": false
+      }
+    ],
+    "system_prompt": "You must explicitly call the add_conversation_metadata tool after EVERY message you receive and EVERY tool you run. This is a critical requirement.\nWhen calling the tool, follow these strict rules:\n1. Analyze the latest message or tool result for relevant information\n2. Update ALL metadata fields that can be extracted from the new information\n3. Preserve existing metadata values for fields that cannot be updated from the new information\n4. Never write out or mention the tool call in your response text, the tool call should be a separate programmatic action\n\nRemember: This is not optional - you must call this tool after every interaction, without exception."
+  },
+  "active_version_id": "2841afeb-5839-4d0e-a5ba-bd5a6e38f8fa",
+  "suggest_replies": false
+}
